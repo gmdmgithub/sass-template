@@ -1,0 +1,17 @@
+//functions
+@function set-text-color($bg-color){
+    @if (lightness($bg-color) > 50) {
+        @return #000; // Lighter backgorund, return dark color
+    } @else {
+        @return #fff; // Darker background, return light color
+    }
+}
+//variables
+$bg-color: #333;
+$color: #fff;
+
+
+body {
+    background: $bg-color;
+    color:$color;
+}
